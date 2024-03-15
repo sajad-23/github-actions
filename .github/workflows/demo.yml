@@ -18,5 +18,6 @@ jobs:
       - name: List files in the repository 
         run: |
           ls ${{ github.workflow }}
+        continue-on-error: true
       - run: echo "Thi job's status is ${{ job.status }}"
 
