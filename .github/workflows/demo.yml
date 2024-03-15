@@ -17,7 +17,7 @@ jobs:
       - run: echo "The workflow is now ready"
       - name: List files in the repository 
         run: |
-          ls ${{ github.workflow }}
+          ls ${{ github.workspace }}
         continue-on-error: true
       - run: echo "Thi job's status is ${{ job.status }}"
 
