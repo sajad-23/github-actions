@@ -6,3 +6,9 @@ myenv
 
 .env*
 *.env
+
+.pytest_cache
+junit
+.coverage
+
+__pycache__
