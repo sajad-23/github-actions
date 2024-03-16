@@ -5,7 +5,7 @@ on:
   push:
 
 jobs:
-  build-python:
+  build:
     runs-on: ubuntu-latest
     # environment: production
     steps:
@@ -21,3 +21,5 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
+          django-admin startproject project
+          echo $project
