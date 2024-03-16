@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo "${{ PATH }}"
+        continue-on-error: true
         name:  Install Python
       - uses: actions/setup-python@v3
         with:
