@@ -44,5 +44,5 @@ jobs:
         with:
             name: Upload pytest tests results
             path: tests-results.txt
-            if-no-files-found: error
+            if-no-files-found: warn
         if: ${{ always() }}
