@@ -15,11 +15,14 @@ jobs:
         with:
           python-version: 3.9
           cache: 'pip'
+          architecture: 'x64'
       - name: Run Python script
         run: python3 main.py
       - name: Install requirements
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-          django-admin startproject project
-          echo $project
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      
+    
