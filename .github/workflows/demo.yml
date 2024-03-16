@@ -7,14 +7,15 @@ on:
 jobs:
   build-python:
     runs-on: ubuntu-latest
-    environment: production
+    # environment: production
     steps:
       - uses: actions/checkout@v4
         name:  Install Python
       - uses: actions/setup-python@v3
         with:
           python-version: 3.9
+          cache: 'pip'
       - name: Run Python script
         run: python3 main.py
-
-        
+      - name: Install requirements
+        run: python -m install -r requirements.txt
