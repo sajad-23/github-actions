@@ -43,5 +43,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
             name: Upload pytest tests results
-            path: junit/tests-results.xml
+            path: tests-results.txt
+            if-no-files-found: error
         if: ${{ always() }}
