@@ -12,3 +12,5 @@ junit
 .coverage
 
 __pycache__
+
+dist
