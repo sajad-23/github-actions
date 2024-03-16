@@ -18,4 +18,4 @@ jobs:
       - name: Run Python script
         run: python3 main.py
       - name: Install requirements
-        run: python -m install -r requirements.txt
+        run: pip -m install -r requirements.txt
