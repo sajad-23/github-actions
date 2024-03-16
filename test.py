@@ -3,6 +3,6 @@ import pytest
 
 
 class TestNumber:
-    def equality(self):
+    def test_equality(self):
         x = 'Mohammed'
         assert 'm' in x
