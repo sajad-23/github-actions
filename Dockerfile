@@ -21,7 +21,7 @@ RUN set -xe \
 # Copy and install Python dependencies
 # COPY ["poetry.lock", "pyproject.toml", "./"]
 # RUN poetry install --no-root
-
+RUN python -m pip install --upgrade pip
 # Copy project files
 # COPY ["README.md", "Makefile", "./"]
 COPY github_actions github_actions
