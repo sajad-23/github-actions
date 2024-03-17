@@ -16,13 +16,13 @@ services:
 
   app:
     # build: .
-    restart: unless-stopped
+    restart: always
     # command: python3 manage.py runserver 0.0.0.0:8000
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8000
+      - 8000:8001
     # depends_on:
       # - db
     # environment:
