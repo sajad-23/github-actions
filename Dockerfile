@@ -30,7 +30,10 @@ COPY github_actions github_actions
 EXPOSE 8000
 
 # Set up the entrypoint
-COPY scripts/entrypoint.sh /entrypoint.sh
-RUN chmod a+x /entrypoint.sh
+# COPY scripts/entrypoint.sh /entrypoint.sh
+# RUN chmod a+x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+# ENTRYPOINT ["/entrypoint.sh"]
+COPY . .
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "github_actions.wsgi"]
