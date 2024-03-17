@@ -23,7 +23,7 @@ RUN poetry install --no-root
 
 # Copy project files
 COPY ["README.md", "Makefile", "./"]
-COPY github-actions github-actions
+COPY github_actions github_actions
 COPY local local
 
 # Expose the Django development server port (adjust if needed)
