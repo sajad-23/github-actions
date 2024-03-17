@@ -11,18 +11,19 @@ ENV PYTHONPATH .
 # ENV COOKING_CORE_SETTING_IN_DOCKER true
 
 # Install dependencies
-RUN set -xe \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends build-essential \
+# RUN set -xe \
+RUN apt-get update
+    # && apt-get update \
+    # && apt-get install -y --no-install-recommends build-essential \
     # && pip install virtualenvwrapper poetry==1.4.2 \
-    && apt-get clean 
+    # && apt-get clean 
     
     # && rm -rf /var/lib/apt/lists/*
 
 # Copy and install Python dependencies
 # COPY ["poetry.lock", "pyproject.toml", "./"]
 # RUN poetry install --no-root
-RUN echo 'upgrade pip'
+# RUN echo 'upgrade pip'
 RUN python -m pip install --upgrade pip
 # Copy project files
 # COPY ["README.md", "Makefile", "./"]
