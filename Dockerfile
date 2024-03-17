@@ -27,7 +27,7 @@ COPY github_actions github_actions
 # COPY local local
 
 # Expose the Django development server port (adjust if needed)
-EXPOSE 8000
+EXPOSE 8001
 
 # Set up the entrypoint
 # COPY scripts/entrypoint.sh /entrypoint.sh
