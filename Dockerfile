@@ -1,5 +1,6 @@
 # Use an official Python runtime as the base image
-FROM python:3.10.4-buster
+FROM python:3.9
+
 
 # Set the working directory in the container
 WORKDIR /opt/project
@@ -21,6 +22,7 @@ RUN set -xe \
 # Copy and install Python dependencies
 # COPY ["poetry.lock", "pyproject.toml", "./"]
 # RUN poetry install --no-root
+RUN echo 'upgrade pip'
 RUN python -m pip install --upgrade pip
 # Copy project files
 # COPY ["README.md", "Makefile", "./"]
