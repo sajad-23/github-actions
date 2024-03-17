@@ -36,4 +36,4 @@ EXPOSE 8001
 # ENTRYPOINT ["/entrypoint.sh"]
 # COPY . .
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8001", "github_actions.wsgi"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8001", "github_actions.config.wsgi"]
