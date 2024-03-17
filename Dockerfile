@@ -14,8 +14,9 @@ RUN set -xe \
     && apt-get update \
     && apt-get install -y --no-install-recommends build-essential \
     # && pip install virtualenvwrapper poetry==1.4.2 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && apt-get clean 
+    
+    # && rm -rf /var/lib/apt/lists/*
 
 # Copy and install Python dependencies
 # COPY ["poetry.lock", "pyproject.toml", "./"]
@@ -31,8 +32,9 @@ EXPOSE 8001
 
 # Set up the entrypoint
 # COPY scripts/entrypoint.sh /entrypoint.sh
+COPY github_actions/requirements.txt requirements.txt
 # RUN chmod a+x /entrypoint.sh
-
+RUN pip install -r requirements.txt
 # ENTRYPOINT ["/entrypoint.sh"]
 # COPY . .
 
