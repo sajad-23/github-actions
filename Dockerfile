@@ -32,7 +32,7 @@ EXPOSE 8001
 
 # Set up the entrypoint
 # COPY scripts/entrypoint.sh /entrypoint.sh
-COPY github_actions/requirements.txt requirements.txt
+COPY github_actions/requirements.txt .
 # RUN chmod a+x /entrypoint.sh
 RUN pip install -r requirements.txt
 # ENTRYPOINT ["/entrypoint.sh"]
