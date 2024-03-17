@@ -7,7 +7,7 @@ WORKDIR /opt/project
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONPATH .
-ENV COOKING_CORE_SETTING_IN_DOCKER true
+# ENV COOKING_CORE_SETTING_IN_DOCKER true
 
 # Install dependencies
 RUN set -xe \
@@ -18,13 +18,13 @@ RUN set -xe \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy and install Python dependencies
-COPY ["poetry.lock", "pyproject.toml", "./"]
-RUN poetry install --no-root
+# COPY ["poetry.lock", "pyproject.toml", "./"]
+# RUN poetry install --no-root
 
 # Copy project files
-COPY ["README.md", "Makefile", "./"]
+# COPY ["README.md", "Makefile", "./"]
 COPY github_actions github_actions
-COPY local local
+# COPY local local
 
 # Expose the Django development server port (adjust if needed)
 EXPOSE 8000
