@@ -15,9 +15,12 @@ services:
   #     - postgresql-data:/var/lib/postgresql/data
 
   app:
-    build: .
+    # build: .
     restart: unless-stopped
-    command: python3 manage.py runserver 0.0.0.0:8000
+    # command: python3 manage.py runserver 0.0.0.0:8000
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - 8000
     # depends_on:
